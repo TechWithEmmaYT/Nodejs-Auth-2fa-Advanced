@@ -14,6 +14,7 @@ const defaults: CookieOptions = {
   httpOnly: true, // Makes the cookie inaccessible to JavaScript
   secure: config.NODE_ENV === "production" ? true : false, // Ensures cookies are sent over HTTPS only in production
   sameSite: config.NODE_ENV === "production" ? "none" : "lax", // CSRF protection
+  priority: "high",
 };
 
 export const getRefreshTokenCookieOptions = (): CookieOptions => {
