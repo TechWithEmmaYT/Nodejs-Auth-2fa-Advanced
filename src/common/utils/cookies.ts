@@ -33,6 +33,7 @@ export const getAccessTokenCookieOptions = (): CookieOptions => {
   return {
     ...defaults,
     expires,
+    path: "/",
   };
 };
 
